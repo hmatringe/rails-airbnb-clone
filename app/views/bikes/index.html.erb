@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-8 col-xs-offset-2">
+      <h1>All the Bikes</h1>
+      <ul>
+        <% @bikes.each do |bike| %>
+        <li>
+          <%= bike.brand_model.brand.name %> - <%= bike.brand_model.name %>
+          <ul>
+            <li>
+              Color: <%= bike.color %> | <%= bike.electric ? "Electric" : "Not electric" %> | Rental price per day: <%= bike.daily_price_in_cents / 100 %> DKK
+            </li>
+            <li>
+              <%= bike.description %>
+            </li>
+            <li>
+              Pick-up address: <%= bike.address %> [XXX ultimately replaced by a map XXX]
+            </li>
+            <% if bike.user.name %>
+            <li>
+              Owner: <%= bike.user.name %> | Tel: <%= bike.user.phone_number %>
+            </li>
+            <% end %>
+            <li>
+              [XXX pictures available Tuesday XXX]
+            </li>
+            <%= link_to "See full details", bike_path(bike) %> <br>
+          </ul>
+          <% end %>
+        </ul>
+
+      </div>
+    </div>
+  </div>

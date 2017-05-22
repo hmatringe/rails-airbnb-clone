@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-8 col-xs-offset-2">
+      <h1><%= @bike.brand_model.brand.name %> | <%= @bike.brand_model.name %></h1>
+      Color: <%= @bike.color %> <br>
+      Electric: <%= @bike.electric ? "yes" : "no" %> <br>
+      Daily rental price: <%= @bike.daily_price_in_cents / 100 %> DKK <br>
+      <%= @bike.description %> <br>
+      Pick-up address: <%= @bike.address %> [XXX ultimately replaced by a map XXX]<br>
+      <% if @bike.user.name %>
+      Owner: <%= @bike.user.name %> <br>
+      <% end %>
+      <% if @bike.user.phone_number %>
+      Owner phone number: <%= @bike.user.phone_number %> <br>
+      <% end %>
+      [XXX pictures available Tuesday XXX] <br>
+
+      <%= link_to "Back to home", bikes_path %> <br>
+
+    </div>
+  </div>
+</div>
