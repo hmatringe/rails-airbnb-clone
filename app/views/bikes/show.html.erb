@@ -2,6 +2,7 @@
   <div class="row">
     <div class="col-xs-8 col-xs-offset-2">
       <h1><%= @bike.brand_model.brand.name %> | <%= @bike.brand_model.name %></h1>
+      <%= cl_image_tag @bike.photo.path, width: 800, crop: :fit %> <br>
       Color: <%= @bike.color %> <br>
       Electric: <%= @bike.electric ? "yes" : "no" %> <br>
       Daily rental price: <%= @bike.daily_price_in_cents / 100 %> DKK <br>
@@ -13,7 +14,6 @@
       <% if @bike.user.phone_number %>
       Owner phone number: <%= @bike.user.phone_number %> <br>
       <% end %>
-      [XXX pictures available Tuesday XXX] <br>
 
       <%= link_to "Back to home", bikes_path %> <br>
 

@@ -5,7 +5,8 @@
       <ul>
         <% @bikes.each do |bike| %>
         <li>
-          <%= bike.brand_model.brand.name %> - <%= bike.brand_model.name %>
+          <%= bike.brand_model.brand.name %> - <%= bike.brand_model.name %> <br>
+          <%= cl_image_tag bike.photo.path, width: 400, crop: :fit if bike.photo %> <br>
           <ul>
             <li>
               Color: <%= bike.color %> | <%= bike.electric ? "Electric" : "Not electric" %> | Rental price per day: <%= bike.daily_price_in_cents / 100 %> DKK
