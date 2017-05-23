@@ -128,3 +128,4 @@ booking4 = Booking.new(start_date:Date.today+7,end_date:Date.today+15)
 booking4.bike = bike9
 booking4.user = user14
 booking4.save
+
