@@ -1,3 +1,8 @@
+classes = [Booking, Bike, User, BrandModel, Brand]
+classes.each do |c|
+  c.destroy_all
+end
+
 brand2 = Brand.new(name:"Christinia bike")
 brand2.save
 
@@ -11,7 +16,7 @@ bike1 = Bike.new(color:"red",electric:false, daily_price_in_cents:3000, descript
 
 bike1.brand_model = brand_model
 
-user1 = User.new(email: "weed@dudu.com", password: "123456ei")
+user1 = User.new(email: "weed@dudu.com", password: "123456ei", name:"John", phone_number:"12 34 56 78")
 
 bike1.user = user1
 
@@ -46,20 +51,20 @@ brand_model6.brand = brand3
 brand_model6.save
 
 
-user2 = User.new(email: "wuhu@dudu.com", password: "123455")
-user3 = User.new(email: "wihi@dudu.com", password: "123454")
-user4 = User.new(email: "huhu@dudu.com", password: "123453")
-user5 = User.new(email: "brum@dudu.com", password: "123452")
-user6 = User.new(email: "boby@dudu.com", password: "123451")
-user7 = User.new(email: "bob@dudu.com", password: "123450")
-user8 = User.new(email: "lars@dudu.com", password: "123457")
-user9 = User.new(email: "ana@dudu.com", password: "123458")
-user10 = User.new(email: "vivi@dudu.com", password: "123459")
-user11 = User.new(email: "livi@dudu.com", password: "1234510")
-user12 = User.new(email: "viki@dudu.com", password: "1234561")
-user13 = User.new(email: "cykelbabe@dudu.com", password: "1234562")
-user14 = User.new(email: "matt@dudu.com", password: "1234563")
-user15 = User.new(email: "alex@dudu.com", password: "1234564")
+user2 = User.new(email: "wuhu@dudu.com", password: "123455", name:"John", phone_number:"13 42 32 68")
+user3 = User.new(email: "wihi@dudu.com", password: "123454", name:"Daniel", phone_number:"13 52 57 68")
+user4 = User.new(email: "huhu@dudu.com", password: "123453", name:"Melinda", phone_number:"43 42 57 68")
+user5 = User.new(email: "brum@dudu.com", password: "123452", name:"Paul", phone_number:"13 42 85 68")
+user6 = User.new(email: "boby@dudu.com", password: "123451", name:"Edith", phone_number:"13 72 57 73")
+user7 = User.new(email: "bob@dudu.com", password: "123450", name:"Raul", phone_number:"13 42 90 92")
+user8 = User.new(email: "lars@dudu.com", password: "123457", name:"Baptiste", phone_number:"13 42 50 91")
+user9 = User.new(email: "ana@dudu.com", password: "123458", name:"Juan", phone_number:"33 42 74 68")
+user10 = User.new(email: "vivi@dudu.com", password: "123459", name:"Werner", phone_number:"63 43 58 68")
+user11 = User.new(email: "livi@dudu.com", password: "1234510", name:"Paula", phone_number:"53 42 57 68")
+user12 = User.new(email: "viki@dudu.com", password: "1234561", name:"Sandy", phone_number:"73 92 77 68")
+user13 = User.new(email: "cykelbabe@dudu.com", password: "1234562", name:"Murielle", phone_number:"13 42 57 68")
+user14 = User.new(email: "matt@dudu.com", password: "1234563", name:"Mathew", phone_number:"83 42 53 68")
+user15 = User.new(email: "alex@dudu.com", password: "1234564", name:"Lohan", phone_number:"84 42 63 68")
 
 
 bike2 = Bike.new(color:"red",electric:false, daily_price_in_cents:3100, description:"This ugly beast",address:"Classensgade, 2100 Copenhagen")
@@ -88,7 +93,7 @@ bike6.user = user6
 bike6.save
 
 bike7 = Bike.new(color:"black",electric:false, daily_price_in_cents:3600, description:"Sweet family bike! Rent it for a weekend!",address:"Enghavevej, 1674 Copenhagen")
-bike7.brand_model = brand_model1
+bike7.brand_model = brand_model2
 bike7.user = user7
 bike7.save
 
