@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 brand2 = Brand.new(name:"Christinia bike")
 brand2.save
 
@@ -160,4 +158,3 @@ bike9.photo_url = url9
 
 url10 = "http://res.cloudinary.com/duubesaxh/image/upload/v1495465751/christiania-bike-light-black_i7ljeu.jpg"
 bike10.photo_url = url10
->>>>>>> a451b306294fa27d17f978b74fff0173fdd1cc9d
