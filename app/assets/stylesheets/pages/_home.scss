@@ -2,3 +2,9 @@
  * CSS code specific to home page
  * (margin/padding adjustments)
  * ------------------------------------- */
+#body-wrapper{
+  position: relative;
+ }
+#content-wrapper div{
+  padding: 0 0 60px 0;
+}
