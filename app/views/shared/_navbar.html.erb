@@ -59,7 +59,18 @@
     <% end %>
 
     <!-- Button (call-to-action) -->
-    <%= link_to t(".top_call_to_action", default: "Rent out your Bike"), new_bike_path, class: "navbar-wagon-item navbar-wagon-button btn" %>
+    <% if current_user %>
+      <%= link_to t(".top_call_to_action", default: "Rent out your Bike"), new_bike_path, class: "navbar-wagon-item navbar-wagon-button btn" %>
+    <% else %>
+      <%= link_to t(".top_call_to_action", default: "Rent out your Bike"), "", class: "navbar-wagon-item navbar-wagon-button btn" %>
+      <% content_for(:after_js) do  %>
+        <script>
+        $(".navbar-wagon-button").click(function() {
+        alert("You mut be logged in to rent out your bike").html_safe
+        })
+        </script>
+        <% end %>
+    <% end %>
   </div>
 
   <!-- Dropdown list appearing on mobile only -->
