@@ -2,10 +2,10 @@
   <div class="row">
     <div class="col-xs-8 col-xs-offset-2">
       <h1><%= @bike.brand_model.brand.name %> | <%= @bike.brand_model.name %></h1>
-      <%= cl_image_tag @bike.photo.path, width: 800, crop: :fit %> <br>
+      <%= cl_image_tag @bike.photo.path, width: 800, crop: :fit if @bike.photo %> <br>
       Color: <%= @bike.color %> <br>
       Electric: <%= @bike.electric ? "yes" : "no" %> <br>
-      Daily rental price: <%= @bike.daily_price_in_cents / 100 %> DKK <br>
+      Daily rental price: <%# @bike.daily_price_in_cents / 100 %> DKK <br>
       <%= @bike.description %> <br>
       Pick-up address: <%= @bike.address %> [XXX ultimately replaced by a map XXX]<br>
       <% if @bike.user.name %>

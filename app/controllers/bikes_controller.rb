@@ -10,12 +10,14 @@ class BikesController < ApplicationController
 
   def new
     @bike = Bike.new
-    @brand_models = BrandModel.all
-    @brands = Brand.all
+    # @brands = Brand.all
+    @brand = Brand.new
+    # @brand_models = BrandModel.all
     # raise
   end
 
   def create
+    # raise
     @bike = Bike.new(bike_params)
     # raise
     if @bike.save
