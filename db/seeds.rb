@@ -1,10 +1,9 @@
-brand = Brand.new(name:"Nihola")
+brand2 = Brand.new(name:"Christinia bike")
+brand2.save
 
-brand.save
+brand_model = BrandModel.new(name:"Sky")
 
-brand_model = BrandModel.new(name:"Family")
-
-brand_model.brand = brand
+brand_model.brand = brand2
 
 brand_model.save
 
@@ -18,9 +17,9 @@ bike1.user = user1
 
 bike1.save
 
+brand = Brand.new(name:"Nihola")
 
-brand2 = Brand.new(name:"Christinia bike")
-brand2.save
+brand.save
 
 brand3 = Brand.new(name:"Winther")
 brand3.save
@@ -64,47 +63,47 @@ user15 = User.new(email: "alex@dudu.com", password: "1234564")
 
 
 bike2 = Bike.new(color:"red",electric:false, daily_price_in_cents:3100, description:"This ugly beast",address:"Classensgade, 2100 Copenhagen")
-bike2.brand_model = brand_model
+bike2.brand_model = brand_model2
 bike2.user = user2
 bike2.save
 
 bike3 = Bike.new(color:"blue",electric:false, daily_price_in_cents:3200, description:"Nice ride",address:"Willemoesgade, 1200 Copenhagen")
-bike3.brand_model = brand_model
+bike3.brand_model = brand_model3
 bike3.user = user3
 bike3.save
 
 bike4 = Bike.new(color:"green",electric:false, daily_price_in_cents:3300, description:"Old and gracefull",address:"Noerrebrogade, 2200 Copenhagen")
-bike4.brand_model = brand_model
+bike4.brand_model = brand_model4
 bike4.user = user4
 bike4.save
 
 bike5 = Bike.new(color:"black",electric:false, daily_price_in_cents:3400, description:"Brand new",address:"Soenderbulevard, 2300 Copenhagen")
-bike5.brand_model = brand_model
+bike5.brand_model = brand_model5
 bike5.user = user5
 bike5.save
 
 bike6 = Bike.new(color:"white",electric:false, daily_price_in_cents:3500, description:"Join the fun ride!",address:"Vesterbro, 1674 Copenhagen")
-bike6.brand_model = brand_model
+bike6.brand_model = brand_model6
 bike6.user = user6
 bike6.save
 
 bike7 = Bike.new(color:"black",electric:false, daily_price_in_cents:3600, description:"Sweet family bike! Rent it for a weekend!",address:"Enghavevej, 1674 Copenhagen")
-bike7.brand_model = brand_model
+bike7.brand_model = brand_model1
 bike7.user = user7
 bike7.save
 
 bike8 = Bike.new(color:"red",electric:false, daily_price_in_cents:3700, description:"Sporty little beast!",address:"Kingos gade, 2000 Copenhagen")
-bike8.brand_model = brand_model
+bike8.brand_model = brand_model2
 bike8.user = user8
 bike8.save
 
 bike9 = Bike.new(color:"green",electric:false, daily_price_in_cents:3800, description:"Pets allowed! Take you puppy for a ride!",address:"Kongens Nytorv, 2000 Copenhagen")
-bike9.brand_model = brand_model
+bike9.brand_model = brand_model3
 bike9.user = user9
 bike9.save
 
 bike10 = Bike.new(color:"white",electric:false, daily_price_in_cents:3900, description:"Take a lovely bike trip in town!",address:"Norreport, 2100 Copenhagen")
-bike10.brand_model = brand_model
+bike10.brand_model = brand_model4
 bike10.user = user10
 bike10.save
 
@@ -128,3 +127,34 @@ booking4 = Booking.new(start_date:Date.today+7,end_date:Date.today+15)
 booking4.bike = bike9
 booking4.user = user14
 booking4.save
+
+
+url = "http://res.cloudinary.com/duubesaxh/image/upload/v1495465751/christiania-bike-blue_m29jrg.jpg"
+bike1.photo_url = url
+
+url2 = "http://res.cloudinary.com/duubesaxh/image/upload/v1495470853/nihola-dog_cnw8pd.jpg"
+bike2.photo_url = url2
+
+url3 = "http://res.cloudinary.com/duubesaxh/image/upload/v1495465751/christiania-bike-green_b4n4m2.jpg"
+bike3.photo_url = url3
+
+url4 = "http://res.cloudinary.com/duubesaxh/image/upload/v1495465751/christiania-bike-light-black_i7ljeu.jpg"
+bike4.photo_url = url4
+
+url5 = "http://res.cloudinary.com/duubesaxh/image/upload/v1495465752/winther-kangaroo-lite-red_x7qgo1.jpg"
+bike5.photo_url = url5
+
+url6 = "http://res.cloudinary.com/duubesaxh/image/upload/v1495465752/winther_kangaroo_luxe_fu6z1q.png"
+bike6.photo_url = url6
+
+url7 = "http://res.cloudinary.com/duubesaxh/image/upload/v1495465751/christiania-bike-blue_m29jrg.jpg"
+bike7.photo_url = url7
+
+url8 = "http://res.cloudinary.com/duubesaxh/image/upload/v1495470853/nihola-dog_cnw8pd.jpg"
+bike8.photo_url = url8
+
+url9 = "http://res.cloudinary.com/duubesaxh/image/upload/v1495465751/christiania-bike-green_b4n4m2.jpg"
+bike9.photo_url = url9
+
+url10 = "http://res.cloudinary.com/duubesaxh/image/upload/v1495465751/christiania-bike-light-black_i7ljeu.jpg"
+bike10.photo_url = url10
