@@ -7,7 +7,7 @@
       Electric: <%= @bike.electric ? "yes" : "no" %> <br>
       Daily rental price: <%# @bike.daily_price_in_cents / 100 %> DKK <br>
       <%= @bike.description %> <br>
-      Pick-up address: <%= @bike.address %> [XXX ultimately replaced by a map XXX]<br>
+      Pick-up address: <%= @bike.address %><br>
       <% if @bike.user.name %>
       Owner: <%= @bike.user.name %> <br>
       <% end %>

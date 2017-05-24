@@ -165,4 +165,14 @@ bike9.photo_url = url9
 
 url10 = "http://res.cloudinary.com/duubesaxh/image/upload/v1495624190/bike10_gbymli.png"
 bike10.photo_url = url10
+
+bike2.electric = true
+bike2.save
+bike3.electric = true
+bike3.save
+bike5.electric = true
+bike5.save
+bike7.electric = true
+bike7.save
+
 puts "Seed finished"
