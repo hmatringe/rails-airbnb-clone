@@ -12,7 +12,7 @@ class BookingsController < ApplicationController
       @booking.user = current_user
       @booking.bike = @bike
       if @booking.save
-        flash[:notice] = "Booking successfully created!"
+        flash[:notice] = "Booking successfully created from #{@booking.start_date} to #{@booking.end_date}!"
         redirect_to @bike
       else
         render "bikes/show"
