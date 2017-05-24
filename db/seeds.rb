@@ -1,7 +1,9 @@
+puts "Seed starting"
 classes = [Booking, Bike, User, BrandModel, Brand]
 classes.each do |c|
   c.destroy_all
 end
+puts "All records deleted, creating new records"
 
 brand2 = Brand.new(name:"Christinia bike")
 brand2.save
@@ -163,3 +165,4 @@ bike9.photo_url = url9
 
 url10 = "http://res.cloudinary.com/duubesaxh/image/upload/v1495624190/bike10_gbymli.png"
 bike10.photo_url = url10
+puts "Seed finished"
