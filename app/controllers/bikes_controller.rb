@@ -7,6 +7,11 @@ class BikesController < ApplicationController
 
   def show
     @booking = Booking.new
+    @mapped_bike = Gmaps4rails.build_markers(@bike) do |bike, marker|
+      marker.lat bike.latitude
+      marker.lng bike.longitude
+    end
+    # raise
   end
 
   def new

@@ -12,10 +12,12 @@
       Owner: <%= @bike.user.name %> <br>
       <% end %>
       <% if @bike.user.phone_number %>
-      Owner phone number: <%= @bike.user.phone_number %> <br>
+      Owner phone number: <%= @bike.user.phone_number %> <br><br>
       <% end %>
 
-      <%= link_to "Back to home", bikes_path %> <br>
+      <%= link_to "Back to home", bikes_path %> <br><br>
+
+    <div id="map" style="width: 100%; height: 600px;"></div>
 
     </div>
     <div class="col-xs-2 col-xs-offset-1">
@@ -29,3 +31,25 @@
 
   </div>
 </div>
+
+
+
+
+
+<% content_for(:after_js) do  %>
+  <script>
+    $(document).ready(function() {
+      var handler = Gmaps.build('Google');
+      handler.buildMap({ internal: { id: 'map' } }, function() {
+        markers = handler.addMarkers(<%= raw @mapped_bike.to_json %>);
+        handler.bounds.extendWith(markers);
+        handler.fitMapToBounds();
+        if (markers.length == 0) {
+          handler.getMap().setZoom(2);
+        } else if (markers.length == 1) {
+          handler.getMap().setZoom(14);
+        }
+      });
+    });
+  </script>
+<% end %>
