@@ -64,12 +64,11 @@
     <% else %>
       <%= link_to t(".top_call_to_action", default: "Rent out your Bike"), "", class: "navbar-wagon-item navbar-wagon-button btn" %>
       <% content_for(:after_js) do  %>
-      <%= flash[:alert] = "You must be signed in to create a booking!" %>
-        <!-- <script>
+        <script>
         $(".navbar-wagon-button").click(function() {
         alert("You mut be logged in to rent out your bike").html_safe
         })
-        </script> -->
+        </script>
         <% end %>
     <% end %>
   </div>
