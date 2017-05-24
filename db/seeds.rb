@@ -134,32 +134,32 @@ booking4.user = user14
 booking4.save
 
 
-url = "http://res.cloudinary.com/duubesaxh/image/upload/v1495465751/christiania-bike-blue_m29jrg.jpg"
+url = "http://res.cloudinary.com/duubesaxh/image/upload/v1495624187/bike1_nnif62.png"
 bike1.photo_url = url
 
-url2 = "http://res.cloudinary.com/duubesaxh/image/upload/v1495470853/nihola-dog_cnw8pd.jpg"
+url2 = "http://res.cloudinary.com/duubesaxh/image/upload/v1495624188/bike2_zmiz40.png"
 bike2.photo_url = url2
 
-url3 = "http://res.cloudinary.com/duubesaxh/image/upload/v1495465751/christiania-bike-green_b4n4m2.jpg"
+url3 = "http://res.cloudinary.com/duubesaxh/image/upload/v1495624187/bike3_fh3tnn.png"
 bike3.photo_url = url3
 
-url4 = "http://res.cloudinary.com/duubesaxh/image/upload/v1495465751/christiania-bike-light-black_i7ljeu.jpg"
+url4 = "http://res.cloudinary.com/duubesaxh/image/upload/v1495624187/bike4_johchb.png"
 bike4.photo_url = url4
 
-url5 = "http://res.cloudinary.com/duubesaxh/image/upload/v1495465752/winther-kangaroo-lite-red_x7qgo1.jpg"
+url5 = "http://res.cloudinary.com/duubesaxh/image/upload/v1495624187/bike5_yh3gy0.png"
 bike5.photo_url = url5
 
-url6 = "http://res.cloudinary.com/duubesaxh/image/upload/v1495465752/winther_kangaroo_luxe_fu6z1q.png"
+url6 = "http://res.cloudinary.com/duubesaxh/image/upload/v1495624187/bike6_hg5abu.png"
 bike6.photo_url = url6
 
-url7 = "http://res.cloudinary.com/duubesaxh/image/upload/v1495465751/christiania-bike-blue_m29jrg.jpg"
+url7 = "http://res.cloudinary.com/duubesaxh/image/upload/v1495624188/bike7_sjoq0b.png"
 bike7.photo_url = url7
 
-url8 = "http://res.cloudinary.com/duubesaxh/image/upload/v1495470853/nihola-dog_cnw8pd.jpg"
+url8 = "http://res.cloudinary.com/duubesaxh/image/upload/v1495624188/bike8_abxyre.png"
 bike8.photo_url = url8
 
-url9 = "http://res.cloudinary.com/duubesaxh/image/upload/v1495465751/christiania-bike-green_b4n4m2.jpg"
+url9 = "http://res.cloudinary.com/duubesaxh/image/upload/v1495624191/bike9_kno26k.png"
 bike9.photo_url = url9
 
-url10 = "http://res.cloudinary.com/duubesaxh/image/upload/v1495465751/christiania-bike-light-black_i7ljeu.jpg"
+url10 = "http://res.cloudinary.com/duubesaxh/image/upload/v1495624190/bike10_gbymli.png"
 bike10.photo_url = url10
