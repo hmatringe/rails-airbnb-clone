@@ -1,8 +1,13 @@
-<div class="banner" style="background-image:linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%), url('http://res.cloudinary.com/duubesaxh/image/upload/v1495553916/background_mztjtg.jpg');">
-  <div class="banner-content">
-    <h1>Rent a cargo bike</h1>
-    <p>If you do not have a cargobike you can rent it here</p>
-  </div>
+<div class="container">
+
+
+      <div class="banner" style="background-image:linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%), url('<%= cl_image_path "Frederiksberg-Fonden-ladcykler_besk%C3%A5ret_bopvdz", crop: :fit %> ');">
+        <div class="banner-content">
+          <h1>Rent a cargo bike</h1>
+          <p>If you do not have a cargobike you can rent it here</p>
+        </div>
+      </div>
+
 </div>
 
 <div class="container">
@@ -16,7 +21,7 @@
           <h2><%= link_to "#{bike.brand_model.brand.name} #{bike.brand_model.name}", bike_path(bike) %> </h2>
           <h3> <%= bike.daily_price_in_cents / 100 %> DKK</h3>
           <% if bike.electric %>
-            <h4>Electric</h4>
+          <h4>Electric</h4>
           <% end %>
           <%# bike.id %>
 
