@@ -1,7 +1,9 @@
 $(document).ready(function(){
-  $('.datepicker').datepicker({
+  $('.input-daterange').datepicker({
     format: "yyyy-mm-dd",
     weekStart: 1,
-    autoclose: true
+    autoclose: true,
+    todayHighlight: true,
+    toggleActive: true
   });
 });
