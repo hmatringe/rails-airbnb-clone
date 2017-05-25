@@ -6,6 +6,8 @@ Rails.application.routes.draw do
     resources :bookings, only: [:create]
   end
 
+  resources :bookings, only: [:index]
+
   resources :brand_models, only: [:index]
 
   root to: 'bikes#index'

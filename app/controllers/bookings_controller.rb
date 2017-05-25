@@ -1,5 +1,11 @@
 class BookingsController < ApplicationController
 
+
+  def index
+    @bookings = Booking.where(user:current_user)
+  end
+
+
   def create
     @bike = Bike.find(params[:bike_id])
     if current_user.nil?

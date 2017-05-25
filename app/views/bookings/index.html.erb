@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 text-center">
+    <h1> Welcome to your dashboard</h1>
+    </div>
+    <div class="col-xs-12">
+    <h3>Hello <%= current_user.first_name %></h3>
+    <h4>your info</h4>
+
+      Your email: <%= current_user.email %> <br>
+      Your phone number: <%= current_user.phone_number ? current_user.phone_number : "unspecified" %> <br>
+
+    <em> for development purposes only, User.id:  <%= current_user.id %> </em>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-6">
+    <h2>Your bookings</h2>
+    <% if @bookings.empty? %>
+
+      <p>You have not made any booking yet!</p>
+      <%= link_to "Check out available bikes now!", bikes_path %>
+    <% else %>
+
+
+      <% @bookings.each do |booking| %>
+        <ul>
+          <li>
+            <%= booking.start_date %> | <%= booking.end_date %> | <%= booking.bike.brand_model.brand.name %> | <%= booking.bike.brand_model.name %>
+          </li>
+        </ul>
+      <% end %>
+    <% end %>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-6">
+
+
+    </div>
+  </div>
+</div>
