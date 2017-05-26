@@ -1,6 +1,16 @@
 <div class="container">
   <div class="row">
-    <div class="text-center"><h1>All Bikes</h1></div>
+    <div class="text-center">
+      <h3>
+        All the bikes available from <%= params[:bike][:booking][:start_date] %> and <%= params[:bike][:booking][:end_date] %>
+        <% if params[:bike][:address] %>
+         around <%= params[:bike][:address] %>.
+         <% end %>
+      </h3>
+      <h4>
+        <%= link_to "Modify my search", root_path %> <br><br>
+        </h4>
+    </div>
       <% @bikes.each do |bike| %>
         <div class="col-xs-12 col-sm-4">
           <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path bike.photo.path, crop: :scale; %>');">

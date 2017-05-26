@@ -23,6 +23,7 @@ class BikesController < ApplicationController
     else # fallback if someone puts /bikes in the browser
       @bikes = Bike.all
     end
+    # raise
   end
 
   def show
