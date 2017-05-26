@@ -1,8 +1,28 @@
 class BikesController < ApplicationController
   before_action :set_bike, only: [:show]
 
+  # "bike"=>{"address"=>"Ahornsgade 15, København N, Denmark", "booking"=>{"start_date"=>"2017-05-24", "end_date"=>"2017-05-26"}}
+
   def index
-    @bikes = Bike.all
+    if params[:bike]
+
+      if !params[:bike][:address].blank?
+        @bikes = Bike.near(params[:bike][:address], 2)
+      else
+        @bikes = Bike.all # user did not fill in address field
+      end
+
+      start_date = Date.parse(params[:bike][:booking][:start_date])
+      end_date = Date.parse(params[:bike][:booking][:end_date])
+
+      if !start_date.blank? && !end_date.blank?
+        date_range = (start_date..end_date)
+        @bikes = @bikes.reject { |b| !b.available_on_date_range?(date_range) }
+      end
+
+    else # fallback if someone puts /bikes in the browser
+      @bikes = Bike.all
+    end
   end
 
   def show

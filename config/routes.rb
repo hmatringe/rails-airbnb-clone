@@ -7,8 +7,9 @@ Rails.application.routes.draw do
   end
 
   resources :brand_models, only: [:index]
+
   get "/dashboard", to: 'dashboard#index'
-  root to: 'bikes#index'
+  root to: 'pages#home'
 
   mount Attachinary::Engine => "/attachinary"
 
