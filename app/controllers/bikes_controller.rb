@@ -2,7 +2,12 @@ class BikesController < ApplicationController
   before_action :set_bike, only: [:show]
 
   def index
-    @bikes = Bike.all
+    if params[:bike]
+
+    else
+      @bikes = Bike.all
+    end
+
   end
 
   def show

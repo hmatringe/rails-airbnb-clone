@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   resources :brand_models, only: [:index]
 
-  root to: 'bikes#index'
+  root to: 'pages#home'
 
   mount Attachinary::Engine => "/attachinary"
 
