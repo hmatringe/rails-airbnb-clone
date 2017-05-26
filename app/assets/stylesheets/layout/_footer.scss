@@ -1,5 +1,5 @@
 .footer-wrapper {
-  background-color: $gray;
+  background-color: white;
   height: 100px;
   color: #CCCCCC;
   // position: relative;
@@ -16,4 +16,7 @@
   display: inline-block;
   letter-spacing: 20px;
   padding: 5px;
+}
+.footer li:hover{
+  color: $blue;
 }
