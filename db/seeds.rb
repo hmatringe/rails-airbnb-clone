@@ -5,16 +5,16 @@ classes.each do |c|
 end
 puts "All records deleted, creating new records"
 
-brand2 = Brand.new(name:"Christinia bike")
-brand2.save
+brand = Brand.new(name:"Bullitt")
+brand.save
 
-brand_model = BrandModel.new(name:"Sky")
+brand_model = BrandModel.new(name:"Cargo")
 
-brand_model.brand = brand2
+brand_model.brand = brand
 
 brand_model.save
 
-bike1 = Bike.new(color:"red",electric:false, daily_price_in_cents:3000, description:"This beauty is sleeping in my garage since my kids learned to bike! But it's a gift and I can't let it go. Take good care of it and enjoy!",address:"Kgs Nytorv, 2200 Copenhagen")
+bike1 = Bike.new(color:"white",electric:false, daily_price_in_cents:34000, description:"This beauty is sleeping in my garage since my kids learned to bike! But it's a gift and I can't let it go. Take good care of it and enjoy!",address:"Kgs Nytorv, 2200 Copenhagen")
 
 bike1.brand_model = brand_model
 
@@ -24,32 +24,40 @@ bike1.user = user1
 
 bike1.save
 
-brand = Brand.new(name:"Nihola")
+brand2 = Brand.new(name:"YellowBike")
+brand2.save
 
-brand.save
-
-brand3 = Brand.new(name:"Winther")
+brand3 = Brand.new(name:"Butchers & Bicycles")
 brand3.save
 
+brand4 = Brand.new(name:"Riese & Müller")
+brand4.save
 
-brand_model2 = BrandModel.new(name:"Dog")
-brand_model2.brand = brand
+brand5 = Brand.new(name:"Trejo")
+brand5.save
+
+brand6 = Brand.new(name:"XYZ")
+brand6.save
+
+
+brand_model2 = BrandModel.new(name:"Cargo")
+brand_model2.brand = brand2
 brand_model2.save
 
-brand_model3 = BrandModel.new(name:"Sport")
-brand_model3.brand = brand2
+brand_model3 = BrandModel.new(name:"MK-1E")
+brand_model3.brand = brand3
 brand_model3.save
 
-brand_model4 = BrandModel.new(name:"Light")
-brand_model4.brand = brand2
+brand_model4 = BrandModel.new(name:"Load touring")
+brand_model4.brand = brand4
 brand_model4.save
 
-brand_model5 = BrandModel.new(name:"Kangaroo lite")
-brand_model5.brand = brand3
+brand_model5 = BrandModel.new(name:"Charger")
+brand_model5.brand = brand5
 brand_model5.save
 
-brand_model6 = BrandModel.new(name:"Kangaroo luxe")
-brand_model6.brand = brand3
+brand_model6 = BrandModel.new(name:"Cargo")
+brand_model6.brand = brand6
 brand_model6.save
 
 
@@ -69,48 +77,48 @@ user14 = User.new(email: "matt@dudu.com", password: "1234563", name:"Mathew", ph
 user15 = User.new(email: "alex@dudu.com", password: "1234564", name:"Lohan", phone_number:"84 42 63 68")
 
 
-bike2 = Bike.new(color:"red",electric:false, daily_price_in_cents:3100, description:"This ugly beast",address:"Classensgade, 2100 Copenhagen")
-bike2.brand_model = brand_model2
+bike2 = Bike.new(color:"blue",electric:false, daily_price_in_cents:50000, description:"This ugly beast",address:"Classensgade, 2100 Copenhagen")
+bike2.brand_model = brand_model4
 bike2.user = user2
 bike2.save
 
-bike3 = Bike.new(color:"blue",electric:false, daily_price_in_cents:3200, description:"Nice ride",address:"Willemoesgade, 1200 Copenhagen")
-bike3.brand_model = brand_model3
+bike3 = Bike.new(color:"yellow",electric:false, daily_price_in_cents:28000, description:"Nice ride",address:"Willemoesgade, 1200 Copenhagen")
+bike3.brand_model = brand_model5
 bike3.user = user3
 bike3.save
 
-bike4 = Bike.new(color:"green",electric:false, daily_price_in_cents:3300, description:"Old and gracefull",address:"Noerrebrogade, 2200 Copenhagen")
-bike4.brand_model = brand_model4
+bike4 = Bike.new(color:"yellow",electric:false, daily_price_in_cents:31000, description:"Old and gracefull",address:"Noerrebrogade, 2200 Copenhagen")
+bike4.brand_model = brand_model2
 bike4.user = user4
 bike4.save
 
-bike5 = Bike.new(color:"black",electric:false, daily_price_in_cents:3400, description:"Brand new",address:"Soenderbulevard, 2300 Copenhagen")
-bike5.brand_model = brand_model5
+bike5 = Bike.new(color:"black",electric:false, daily_price_in_cents:45000, description:"Brand new",address:"Soenderbulevard, 2300 Copenhagen")
+bike5.brand_model = brand_model
 bike5.user = user5
 bike5.save
 
-bike6 = Bike.new(color:"white",electric:false, daily_price_in_cents:3500, description:"Join the fun ride!",address:"Vesterbro, 1674 Copenhagen")
-bike6.brand_model = brand_model6
+bike6 = Bike.new(color:"yellow",electric:false, daily_price_in_cents:47000, description:"Join the fun ride!",address:"Vesterbro, 1674 Copenhagen")
+bike6.brand_model = brand_model
 bike6.user = user6
 bike6.save
 
-bike7 = Bike.new(color:"black",electric:false, daily_price_in_cents:3600, description:"Sweet family bike! Rent it for a weekend!",address:"Enghavevej, 1674 Copenhagen")
-bike7.brand_model = brand_model2
+bike7 = Bike.new(color:"metal",electric:false, daily_price_in_cents:34000, description:"Sweet family bike! Rent it for a weekend!",address:"Enghavevej, 1674 Copenhagen")
+bike7.brand_model = brand_model6
 bike7.user = user7
 bike7.save
 
-bike8 = Bike.new(color:"red",electric:false, daily_price_in_cents:3700, description:"Sporty little beast!",address:"Kingos gade, 2000 Copenhagen")
-bike8.brand_model = brand_model2
+bike8 = Bike.new(color:"black",electric:false, daily_price_in_cents:33000, description:"Sporty little beast!",address:"Kingos gade, 2000 Copenhagen")
+bike8.brand_model = brand_model
 bike8.user = user8
 bike8.save
 
-bike9 = Bike.new(color:"green",electric:false, daily_price_in_cents:3800, description:"Pets allowed! Take you puppy for a ride!",address:"Kongens Nytorv, 2000 Copenhagen")
+bike9 = Bike.new(color:"white",electric:false, daily_price_in_cents:55000, description:"Pets allowed! Take you puppy for a ride!",address:"Kongens Nytorv, 2000 Copenhagen")
 bike9.brand_model = brand_model3
 bike9.user = user9
 bike9.save
 
-bike10 = Bike.new(color:"white",electric:false, daily_price_in_cents:3900, description:"Take a lovely bike trip in town!",address:"Norreport, 2100 Copenhagen")
-bike10.brand_model = brand_model4
+bike10 = Bike.new(color:"yellow",electric:false, daily_price_in_cents:39000, description:"Take a lovely bike trip in town!",address:"Norreport, 2100 Copenhagen")
+bike10.brand_model = brand_model
 bike10.user = user10
 bike10.save
 
@@ -168,11 +176,11 @@ bike10.photo_url = url10
 
 bike2.electric = true
 bike2.save
-bike3.electric = true
-bike3.save
-bike5.electric = true
-bike5.save
-bike7.electric = true
-bike7.save
+bike6.electric = true
+bike6.save
+bike9.electric = true
+bike9.save
+bike10.electric = true
+bike10.save
 
 puts "Seed finished"
