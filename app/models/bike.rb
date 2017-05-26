@@ -6,13 +6,17 @@ class Bike < ApplicationRecord
   geocoded_by :address
   after_validation :geocode, if: :address_changed?
 
+  def available_on_date_range?(range)
+    unless bookings.empty?
+      return !self.booked_dates.any? { |r| r.overlaps?(range) }
+    end
+    true
+  end
+
   def booked_dates
     unless bookings.empty?
       bookings.select { |b| b.status == "accepted" }.map { |b| (b.start_date..b.end_date) }
     end
   end
 
-  def dates_available?(range)
-    !self.booked_dates.any? { |r| r.include?(range) }
-  end
 end
