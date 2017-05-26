@@ -1,4 +1,5 @@
 class BookingsController < ApplicationController
+  before_action :set_booking, only: [:update]
 
   def create
     @bike = Bike.find(params[:bike_id])
@@ -9,6 +10,7 @@ class BookingsController < ApplicationController
       @booking = Booking.new
       @booking.start_date = DateTime.parse(params[:booking][:start_date])
       @booking.end_date = DateTime.parse(params[:booking][:end_date])
+      @booking.status = "pending"
       @booking.user = current_user
       @booking.bike = @bike
       if @booking.save
@@ -20,10 +22,21 @@ class BookingsController < ApplicationController
     end
   end
 
+  def update
+    @booking.status = params[:status]
+    # raise
+    @booking.save
+    redirect_to dashboard_path
+  end
+
   private
 
+  def set_booking
+    @booking = Booking.find(params[:id])
+  end
+
   def booking_params
-    params.require(:booking).permit(:start_date, :end_date)
+    params.require(:booking).permit(:start_date, :end_date, :status)
   end
 
 end
