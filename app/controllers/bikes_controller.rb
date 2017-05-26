@@ -46,7 +46,7 @@ class BikesController < ApplicationController
   def create
     # raise
     @bike = Bike.new(bike_params)
-    # raise
+    @bike.daily_price_in_cents = @bike.daily_price_in_cents * 100
     if @bike.save
       redirect_to @bike
     else
